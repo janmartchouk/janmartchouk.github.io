@@ -1,80 +1,136 @@
+@font-face {
+    font-family: "Granika";
+    src: 
+        local("Granika"),
+        url("r/f/granika.otf") format("opentype");
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+    --color-primary: #ffe600;
+    --color-secondary: #1709e0;
+    --color-background: rgb(255, 0, 0);
+}
+  
+html, body {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@media(max-width: 800px) {
+    html {
+        font-size: 7px;
+    }
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+main {
+    margin: 0;
+    padding: 0;
+    /* background-image: url("r/i/doodle-tile.png"); */
+    background-size: 500px;
+    background-repeat: repeat;
+    background-color: var(--color-background);
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: var(--color-background);
+    min-width: 15vw;
+    max-width: 800px;
+    padding: 3rem;
+    flex-direction: column;
 }
 
-.card {
-  padding: 2em;
+#name {
+    color: var(--color-primary);
+    margin: 7rem 0 3.5rem;
+    padding: 0;
+    text-shadow: 1rem 1rem var(--color-secondary);
+    width: 100%;
+    line-height: 22rem;
+    text-align: center;
+    display: block;
+    font-family: Granika;
+    font-weight: 100;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.name-word {
+    display: block;
+    transition: .05s ease-in-out;
+    cursor: pointer;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+@media(min-width: 800px) {
+    #firstname:hover {
+        letter-spacing: 5rem;
+        transform: translateX(2.5rem);
+    }
+    #lastname:hover {
+        letter-spacing: 1rem;
+        transform: translateX(.5rem);
+    }
+
+    #firstname:active {
+        letter-spacing: 7.5rem;
+        transform: translateX(3.7rem);
+    }
+    #lastname:active {
+        letter-spacing: 2rem;
+        transform: translateX(1rem);
+    }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+#firstname {
+    font-size: 40rem;
+
+}
+
+#lastname {
+    color: var(--color-secondary);
+    text-shadow: .5rem .5rem var(--color-primary);
+    font-size: 13rem;
+    font-weight: normal;
+}
+
+.button {
+    background-color: var(--color-primary);
+    padding: 2rem 4rem 2rem 2rem;
+    font-family: "Granika", "Helvetica", sans-serif;
+    font-size: 5rem;
+    text-decoration: none;
+    box-shadow: 1rem 1rem var(--color-secondary);
+    min-width: 15vw;
+    max-width: 800px;
+    transition: .01s ease-in-out;
+    border-radius: 1rem;
+    height: 6rem;
+}
+
+.button-icon {
+    margin-right: 2rem;
+}
+
+.button:not(:last-of-type) {
+    margin-bottom: 5rem;
+}
+
+.button:visited, .button:hover, .button:Link, .button {
+    color: var(--color-secondary);
+}
+
+.button:hover {
+    /* text-decoration: wavy underline 2.5px; */
+    text-decoration-skip-ink: none;
+    box-shadow: 2rem 2rem var(--color-secondary);
+    transform: scale(1.05)
 }
