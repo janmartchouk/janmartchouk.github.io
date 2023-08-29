@@ -1,0 +1,163 @@
+:root {
+    --color-primary: rgb(37, 37, 37);
+    --color-secondary: rgb(37, 37, 37);
+    --color-background: rgb(247, 252, 255);
+    --font-display: "Scotch Text Comp", "Times New Roman", serif;
+    --font-body: "Scotch Text Comp", "Times New Roman", serif;
+}
+
+@font-face {
+    font-family: 'Scotch Text Comp';
+    src: local('Scotch Text Compressed Roman'), local('ScotchTextComp-Rm'),
+        url('../r/f/ScotchTextComp-Rm.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scotch Text Comp';
+    src: local('Scotch Text Compressed Medium Italic'), local('ScotchTextComp-MdIt'),
+        url('../r/f/ScotchTextComp-MdIt.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scotch Text Comp';
+    src: local('Scotch Text Compressed Black'), local('ScotchTextComp-Bl'),
+        url('../r/f/ScotchTextComp-Bl.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scotch Text Comp';
+    src: local('Scotch Text Compressed Italic'), local('ScotchTextComp-It'),
+        url('../r/f/ScotchTextComp-It.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scotch Text Comp';
+    src: local('Scotch Text Compressed Bold'), local('ScotchTextComp-Bd'),
+        url('../r/f/ScotchTextComp-Bd.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scotch Text Comp';
+    src: local('Scotch Text Compressed Medium'), local('ScotchTextComp-Md'),
+        url('../r/f/ScotchTextComp-Md.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scotch Text Comp';
+    src: local('Scotch Text Compressed Black Italic'), local('ScotchTextComp-BlIt'),
+        url('../r/f/ScotchTextComp-BlIt.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scotch Text Comp';
+    src: local('Scotch Text Compressed SemiBold'), local('ScotchTextComp-Sm'),
+        url('../r/f/ScotchTextComp-Sm.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scotch Text Comp';
+    src: local('Scotch Text Compressed SemiBold Italic'), local('ScotchTextComp-SmIt'),
+        url('../r/f/ScotchTextComp-SmIt.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scotch Text Comp';
+    src: local('Scotch Text Compressed Light'), local('ScotchTextComp-Lt'),
+        url('../r/f/ScotchTextComp-Lt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scotch Text Comp';
+    src: local('Scotch Text Compressed Light Italic'), local('ScotchTextComp-LtIt'),
+        url('../r/f/ScotchTextComp-LtIt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scotch Text Comp';
+    src: local('Scotch Text Compressed Bold Italic'), local('ScotchTextComp-BdIt'),
+        url('../r/f/ScotchTextComp-BdIt.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+#name {
+    font-family: "Scotch Text Comp";
+    font-style: italic;
+    font-weight: Black;
+    color: black;
+    text-transform: lowercase;
+    letter-spacing: -.5rem;
+    font-size: 12.5rem;
+    margin: 5rem 0 15rem;
+    text-align: center;
+}
+
+main {
+    background-image: url('../r/i/clouds-tile.png');
+    background-repeat: repeat;
+    background-size: 100rem;
+}
+
+.center-container {
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.button {
+    font-size: 5rem;
+    text-decoration: none;
+    text-align: left;
+    width: 100%;
+    font-style: italic;
+    letter-spacing: -.25rem;
+}
+
+.button:hover {
+    color: var(--color-background) !important;
+}
+
+.button-icon {
+    margin: 0;
+    font-style: normal;
+    position: relative;
+    top: 5px;
+    color: var(--color-background);
+    display: none;
+}
+.button:not(:last-of-type) {
+    margin-bottom: 3.5rem;
+}
