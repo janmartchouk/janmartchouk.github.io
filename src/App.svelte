@@ -24,7 +24,7 @@
     <details>
       <summary>media</summary>
       <Button id="letterboxd" link="https://letterboxd.com/janmartchouk"></Button>
-      <Button id="musicboard" link="https://musicboard.app/jaaan"></Button>
+      <Button id="musicboard" link="https://musicboard.app/janmartchouk"></Button>
       <Button id="goodreads" link=" https://www.goodreads.com/janmartchouk"></Button>
     </details>  
   </div>
