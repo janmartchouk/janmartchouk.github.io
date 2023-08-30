@@ -58,7 +58,7 @@
     font-weight: normal;
 }
 
-.button {
+.button, summary {
     padding: 2rem 4rem 2rem 2rem;
     font-size: 5rem;
     text-decoration: none;
@@ -72,19 +72,28 @@
     max-width: 800px;
 }
 
+summary {
+    cursor: pointer
+}
+
 @media(max-width: 800px) {
     .button {
         min-width: 80vw;
     }
 }
 
-.button:not(:last-of-type) {
+.button, summary {
+    width: 100%;
     margin-bottom: 5rem;
 }
 
+details .button {
+    position: relative;
+    left: 5rem;
+}
 
 
-.button:hover {
+.button:hover, summary:hover {
     /* text-decoration: wavy underline 2.5px; */
     text-decoration-skip-ink: none;
     box-shadow: 2rem 2rem var(--color-secondary);
@@ -92,6 +101,6 @@
 }
 
 .button-icon {
-    margin-right: 2rem;
+    display: none;
 }
 

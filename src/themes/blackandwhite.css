@@ -137,7 +137,7 @@ main {
     box-sizing: border-box;
 }
 
-.button {
+.button, summary {
     font-size: 5rem;
     text-decoration: none;
     text-align: left;
@@ -146,8 +146,8 @@ main {
     letter-spacing: -.25rem;
 }
 
-.button:hover {
-    color: var(--color-background) !important;
+.button:hover, summary:hover {
+    text-decoration: 3px black underline;
 }
 
 .button-icon {
@@ -158,6 +158,19 @@ main {
     color: var(--color-background);
     display: none;
 }
-.button:not(:last-of-type) {
-    margin-bottom: 3.5rem;
+.button, summary {
+    margin-bottom: 1.5rem;
+}
+
+details > .button {
+    position: relative;
+    left: 4.5rem;
+}
+
+summary {
+    cursor: pointer;
+}
+
+summary, details {
+    transition: .05s ease-in-out;
 }

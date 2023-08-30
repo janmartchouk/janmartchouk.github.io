@@ -29,7 +29,7 @@ main {
 .center-container {
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: start;
     min-height: 100vh;
     height: 100%;
     padding: 3rem;
@@ -50,6 +50,10 @@ main {
     cursor: pointer;
 }
 
-.button:visited, .button:hover, .button:Link, .button {
+.button:visited, .button:hover, .button:Link, .button, summary {
     color: var(--color-secondary);
+}
+
+.button {
+    display: block;
 }

@@ -7,17 +7,27 @@
     var buttonStrings: Record<string, Record<string, string>> = {
     "en": {
       "insta": "instagram & threads",
+      "youtube": "youtube",
+      "bereal": "bereal",
       "graphics": "graphics",
       "plants": "plants",
       "pics": "pics",
-      "towers": "towers"
+      "towers": "towers",
+      "letterboxd": "letterboxd",
+      "musicboard": "musicboard",
+      "goodreads": "goodreads",
     },
     "de": {
       "insta": "instagram & threads",
+      "youtube": "youtube",
+      "bereal": "bereal",
       "graphics": "grafiken",
       "plants": "pflanzen",
       "pics": "bilder",
-      "towers": "türme"
+      "towers": "türme",
+      "letterboxd": "letterboxd",
+      "musicboard": "musicboard",
+      "goodreads": "goodreads"
     }
   }
 
