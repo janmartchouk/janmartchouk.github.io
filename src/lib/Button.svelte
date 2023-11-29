@@ -11,6 +11,8 @@
       "youtube": "youtube",
       "bereal": "bereal",
       "github": "github",
+      "bluesky": "bluesky",
+      "mastodon": "mastodon",
       "graphics": "graphics",
       "plants": "plants",
       "pics": "pics",
@@ -42,3 +44,4 @@
 <a role="button" class="button" rel={rel} id={id} href={link}>
     <span class="button-icon">{icon}</span>{text}
 </a>
+

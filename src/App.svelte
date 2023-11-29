@@ -13,6 +13,8 @@
       <Button rel="me" id="insta" link="https://www.instagram.com/janmartchouk/"></Button>
       <Button rel="me" id="youtube" link="https://www.youtube.com/@janmartchouk"></Button>
       <Button rel="me" id="github" link="https://github.com/janmartchouk"></Button>
+      <Button rel="me" id="bluesky" link="https://bsky.app/profile/martcho.uk"></Button>
+      <Button rel="me" id="mastodon" link="https://mas.to/@janmartchouk"></Button>
     </details>
     <details>
     <summary>blogs</summary>
@@ -35,3 +37,4 @@
 <style>
 
 </style>
+
