@@ -130,6 +130,16 @@ main {
     background-image: url('../r/i/clouds-tile.png');
     background-repeat: repeat;
     background-size: 100rem;
+    animation: moving-sky 45s linear infinite;
+}
+
+@keyframes moving-sky {
+    from {
+        background-position: 200rem -200rem;
+    }
+    to {
+        background-position-x: -200rem 200rem;
+    }
 }
 
 .center-container {
