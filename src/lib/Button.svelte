@@ -3,12 +3,14 @@
     export let link = "#";
     export let icon = "▸"
     export let id = "button";
+    export let rel = "null";
 
     var buttonStrings: Record<string, Record<string, string>> = {
     "en": {
       "insta": "instagram & threads",
       "youtube": "youtube",
       "bereal": "bereal",
+      "github": "github",
       "graphics": "graphics",
       "plants": "plants",
       "pics": "pics",
@@ -18,30 +20,25 @@
       "goodreads": "goodreads",
     },
     "de": {
-      "insta": "instagram & threads",
-      "youtube": "youtube",
-      "bereal": "bereal",
       "graphics": "grafiken",
       "plants": "pflanzen",
       "pics": "bilder",
       "towers": "türme",
-      "letterboxd": "letterboxd",
-      "musicboard": "musicboard",
-      "goodreads": "goodreads"
     }
   }
 
     let userLang:string = navigator.language;
+    text = buttonStrings.en[id];
     if (userLang == "de" || userLang == "de-DE") {
-        text = buttonStrings.de[id];
-    } else {
-        text = buttonStrings.en[id];
+        if (id in buttonStrings.de) {
+            text = buttonStrings.de[id];
+        }
     }
     
     console.log(userLang)
 
 </script>
 
-<a role="button" class="button" id={id} href={link}>
+<a role="button" class="button" rel={rel} id={id} href={link}>
     <span class="button-icon">{icon}</span>{text}
 </a>

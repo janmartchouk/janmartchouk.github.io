@@ -10,9 +10,9 @@
 
     <details>
       <summary>social</summary>
-      <Button id="insta" link="https://www.instagram.com/janmartchouk/"></Button>
-      <Button id="youtube" link="https://www.youtube.com/@janmartchouk"></Button>
-      <Button id="bereal" link="https://bere.al/janmartchouk"></Button>
+      <Button rel="me" id="insta" link="https://www.instagram.com/janmartchouk/"></Button>
+      <Button rel="me" id="youtube" link="https://www.youtube.com/@janmartchouk"></Button>
+      <Button rel="me" id="github" link="https://github.com/janmartchouk"></Button>
     </details>
     <details>
     <summary>blogs</summary>
@@ -23,9 +23,9 @@
     </details>
     <details>
       <summary>media</summary>
-      <Button id="letterboxd" link="https://letterboxd.com/janmartchouk"></Button>
-      <Button id="musicboard" link="https://musicboard.app/janmartchouk"></Button>
-      <Button id="goodreads" link=" https://www.goodreads.com/janmartchouk"></Button>
+      <Button rel="me" id="letterboxd" link="https://letterboxd.com/janmartchouk"></Button>
+      <Button rel="me" id="musicboard" link="https://musicboard.app/janmartchouk"></Button>
+      <Button rel="me" id="goodreads" link=" https://www.goodreads.com/janmartchouk"></Button>
     </details>  
   </div>
 
