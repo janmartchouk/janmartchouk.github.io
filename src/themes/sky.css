@@ -156,10 +156,6 @@ main {
     letter-spacing: -.25rem;
 }
 
-.button:hover, summary:hover {
-    text-decoration: 3px black underline;
-}
-
 .button-icon {
     margin: 0;
     font-style: normal;

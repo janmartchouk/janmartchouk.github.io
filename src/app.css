@@ -57,3 +57,70 @@ main {
 .button {
     display: block;
 }
+
+/* make elements slide in */
+details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+  }
+  
+@keyframes sweep {
+  0%    {opacity: 0; transform:translateX(-10px);}
+  100%  {opacity: 1; transform: none;}
+}
+
+/* replace the triangle on the left with an animated one */
+summary::marker {
+    display: none !important;
+    color: transparent;
+    opacity: 0;
+    text-decoration: none !important;
+    text-decoration-skip-ink: all;
+}
+
+summary::before {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid black;
+    border-right: 20px solid transparent;
+    border-bottom: 1.25rem solid transparent;
+    border-top: 1.25rem solid transparent;
+    display: inline-block;
+    transition: .2s ease-in-out;
+    content: "";
+}
+
+summary:hover::before {
+    transform: translateX(1rem);
+}
+
+details[open] summary::before {
+    transform: rotate(90deg) translate(.75rem, .5rem);
+}
+
+/* make background animation pausable */
+#play-pause:checked ~ main {
+    animation-play-state: paused;
+}
+
+#play-pause {
+    cursor: pointer;
+    display: none;
+}
+
+#play-pause-label {
+    position: fixed;
+    top: 1rem;
+    left: 2rem;
+    font-size: 3rem;
+    letter-spacing: -.75rem;
+    cursor: pointer;
+}
+
+#play-pause:checked + #play-pause-label::after {
+    content: '▶️　';
+}
+
+#play-pause-label::after {
+    content: '⏸️　';
+}
+

@@ -2,6 +2,9 @@
   import Button from './lib/Button.svelte';
 </script>
 
+<!-- make animation toggle-able -->
+<input type="checkbox" id="play-pause" /><label for="play-pause" id="play-pause-label" class="win-button"></label>
+
 <main>
 
   <div class="center-container">
