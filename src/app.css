@@ -58,6 +58,11 @@ main {
     display: block;
 }
 
+.button:hover {
+    text-decoration: underline;
+    text-decoration-thickness: .4rem;
+}
+
 /* make elements slide in */
 details[open] summary ~ * {
     animation: sweep .5s ease-in-out;
