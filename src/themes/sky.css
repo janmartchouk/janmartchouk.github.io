@@ -133,6 +133,12 @@ main {
     animation: moving-sky 45s linear infinite;
 }
 
+@media (prefers-color-scheme: dark) {
+    main {
+        background-image: url('../r/i/dark-clouds-tile.png');
+    }
+}
+
 @keyframes moving-sky {
     from {
         background-position: 200rem -200rem;
@@ -175,6 +181,7 @@ details > .button {
 
 summary {
     cursor: pointer;
+    color: black !important;
 }
 
 summary, details {
