@@ -129,6 +129,12 @@ details[open] summary::before {
     cursor: pointer;
 }
 
+@media(max-width: 800px) {
+    #play-pause-label {
+        font-size: 5rem;
+    }
+}
+
 #play-pause:checked + #play-pause-label::after {
     content: '🌬️　';
 }

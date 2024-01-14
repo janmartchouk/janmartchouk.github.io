@@ -47,6 +47,14 @@ main {
     }
 }
 
+@media (max-width: 500px) {
+    #name {
+        font-size: 10rem !important;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+}
+
 @keyframes moving-sky {
     from {
         background-position: 200rem -200rem;
@@ -87,6 +95,15 @@ main {
 details > .button {
     position: relative;
     left: 4.5rem;
+}
+
+summary::marker {
+    content: "";
+}
+
+summary::marker,
+summary::-webkit-details-marker {
+  display: none;
 }
 
 summary {
