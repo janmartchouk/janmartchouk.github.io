@@ -51,7 +51,7 @@ main {
 }
 
 .button:visited, .button:hover, .button:Link, .button, summary {
-    color: var(--color-secondary);
+    color: var(--text-color);
 }
 
 .button {
@@ -85,7 +85,7 @@ summary::marker {
 summary::before {
     width: 0; 
     height: 0; 
-    border-left: 2rem solid black;
+    border-left: 2rem solid var(--text-color);
     border-right: 2rem solid transparent;
     border-bottom: 1.25rem solid transparent;
     border-top: 1.25rem solid transparent;
@@ -130,10 +130,10 @@ details[open] summary::before {
 }
 
 #play-pause:checked + #play-pause-label::after {
-    content: '▶️　';
+    content: '🌬️　';
 }
 
 #play-pause-label::after {
-    content: '⏸️　';
+    content: '☁️　';
 }
 
