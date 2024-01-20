@@ -1,0 +1,5 @@
+@import url('https://cdn.jsdelivr.net/gh/tzcl/logseq-monokai@main/custom.css');
+
+.whiteboard, .flashcards-nav, .journals-nav {
+  display: none;
+}
