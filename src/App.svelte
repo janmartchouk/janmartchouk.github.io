@@ -14,17 +14,17 @@
     <details>
       <summary>social</summary>
       <Button rel="me" id="insta" link="https://www.instagram.com/janmartchouk/"></Button>
-      <Button rel="me" id="youtube" link="https://www.youtube.com/@janmartchouk"></Button>
+      <Button rel="me" id="twitter" link="https://x.com/janmartchouk"></Button>
       <Button rel="me" id="github" link="https://github.com/janmartchouk"></Button>
       <Button rel="me" id="bluesky" link="https://bsky.app/profile/martcho.uk"></Button>
       <Button rel="me" id="mastodon" link="https://mas.to/@janmartchouk"></Button>
     </details>
     <details>
     <summary>blogs</summary>
-      <Button id="graphics" link="https://farbigstefarben.tumblr.com/"></Button>
-      <Button id="plants" link="https://pollywoodgreenhouse.tumblr.com/"></Button>
-      <Button id="pics" link="https://adidasfeetpics.tumblr.com/"></Button>
-      <Button id="towers" link="https://tuermeinstaedten.tumblr.com/"></Button>
+      <Button id="graphics" link="https://graphics.martcho.uk/"></Button>
+      <Button id="plants" link="https://plants.martcho.uk/"></Button>
+      <Button id="pics" link="https://pics.martcho.uk/"></Button>
+      <Button id="towers" link="https://towers.martcho.uk/"></Button>
     </details>
     <details>
       <summary>media</summary>

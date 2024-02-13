@@ -20,6 +20,7 @@
       "letterboxd": "letterboxd",
       "musicboard": "musicboard",
       "goodreads": "goodreads",
+      "twitter": "twitter"
     },
     "de": {
       "graphics": "grafiken",
