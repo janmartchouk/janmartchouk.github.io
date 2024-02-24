@@ -1,13 +1,12 @@
 <script lang="ts">
   import Button from '../lib/Button.svelte';
   import links from '../lib/links.js';
-
+  import './sky.css'
 </script>
 
 <svelte:head>
     <meta name="theme-color" content="#52a8df" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#040404" media="(prefers-color-scheme: dark)">
-    <link rel="stylesheet" href="src/looks/sky.css">
 </svelte:head>
 
 <!-- make animation toggle-able -->
