@@ -17,7 +17,7 @@
     font-display: swap;
 }
 
-#name {
+#look-sky #name {
     font-family: "Scotch Text Comp Bold Italic";
     font-style: italic;
     font-weight: Black;
@@ -27,9 +27,10 @@
     font-size: 12.5rem;
     margin: 5rem 0 15rem;
     text-align: center;
+    mix-blend-mode:normal;
 }
 
-main {
+#look-sky main {
     background-image: url('../r/i/clouds-tile.png');
     background-repeat: repeat;
     background-size: 100rem;
@@ -42,13 +43,17 @@ main {
         --text-color: rgb(224, 224, 224);
     }
 
-    main {
+    #look-sky main {
         background-image: url('../r/i/dark-clouds-tile.png');
+    }
+
+    #look-sky #name {
+        mix-blend-mode:difference;
     }
 }
 
 @media (max-width: 500px) {
-    #name {
+    #look-sky #name {
         font-size: 10rem !important;
         margin-top: 5rem;
         margin-bottom: 5rem;
@@ -64,12 +69,7 @@ main {
     }
 }
 
-.center-container {
-    min-height: 100vh;
-    box-sizing: border-box;
-}
-
-.button, summary {
+#look-sky .button, summary {
     font-size: 5rem;
     text-decoration: none;
     text-align: left;
@@ -80,7 +80,7 @@ main {
     color: var(--text-color);
 }
 
-.button-icon {
+#look-sky .button-icon {
     margin: 0;
     font-style: normal;
     position: relative;
@@ -88,29 +88,29 @@ main {
     color: var(--text-color);
     display: none;
 }
-.button, summary {
+#look-sky .button, summary {
     margin-bottom: 1.5rem;
 }
 
-details > .button {
+#look-sky details > .button {
     position: relative;
     left: 4.5rem;
 }
 
-summary::marker {
+#look-sky summary::marker {
     content: "";
 }
 
-summary::marker,
-summary::-webkit-details-marker {
+#look-sky summary::marker,
+#look-sky summary::-webkit-details-marker {
   display: none;
 }
 
-summary {
+#look-sky summary {
     cursor: pointer;
     color: var(--text-color) !important;
 }
 
-summary, details {
+#look-sky summary, details {
     transition: .05s ease-in-out;
 }
