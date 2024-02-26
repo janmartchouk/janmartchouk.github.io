@@ -2,9 +2,8 @@
     import './shining.css'
     import links from '../lib/links.js';
     import { longer_names } from '../lib/links.js';
-    console.log(longer_names.social)
-
     import name from "../r/i/jan-shining-transparent.png";
+    import { menuclicks } from '../lib/links.js';
 </script>
 
 <svelte:head>
@@ -18,7 +17,7 @@
 
         <h1>This is<br>An Internet Presence</h1>
 
-        <img class="name" id="name" alt="Jan Martchouk" src={name} />
+        <img class="name" id="name" alt="Jan Martchouk" src={name} on:click={()=> menuclicks.set($menuclicks + 1)}/>
     
         <div id=text-container>
             <span id="link-heading">World Wide Web</span><br>

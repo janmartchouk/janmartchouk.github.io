@@ -1,3 +1,4 @@
+import { writable } from 'svelte/store';
 
 const links : any = {
     social: {
@@ -8,10 +9,10 @@ const links : any = {
       mastodon: "https://mas.to/@janmartchouk"
     },
     blogs: {
-      plants: "plants.martcho.uk",
-      towers: "towers.martcho.uk",
-      pics: "pics.martcho.uk",
-      graphics: "graphics.martcho.uk",
+      plants: "https://plants.martcho.uk",
+      towers: "https://towers.martcho.uk",
+      pics: "https://pics.martcho.uk",
+      graphics: "https://graphics.martcho.uk",
     },
     media: {
       letterboxd: "https://letterboxd.com/janmartchouk",
@@ -29,3 +30,7 @@ const longer_names : any = {
 }
 
 export { longer_names }
+
+let menuclicks = writable(0);
+
+export { menuclicks }

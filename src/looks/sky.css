@@ -28,6 +28,8 @@
     margin: 5rem 0 15rem;
     text-align: center;
     mix-blend-mode:normal;
+    pointer-events: none;
+    user-select: none;
 }
 
 #look-sky main {
@@ -78,6 +80,8 @@
     letter-spacing: -.25rem;
     font-family: 'Times New Roman', Times, serif;
     color: var(--text-color);
+    user-select: none;
+
 }
 
 #look-sky .button-icon {

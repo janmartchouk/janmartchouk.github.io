@@ -2,6 +2,7 @@
   import Button from '../lib/Button.svelte';
   import links from '../lib/links.js';
   import './sky.css'
+  import {menuclicks} from '../lib/links.js';
 </script>
 
 <svelte:head>
@@ -19,7 +20,11 @@
 
       <div class="center-container">
       
-        <h1 id="name"><span class="name-word" id="firstname">Jan</span> <span class="name-word" id="lastname">Martchouk</span></h1>
+        <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <h1 
+        on:click={()=> menuclicks.set($menuclicks + 1)}
+        id="name"><span class="name-word" id="firstname">Jan</span> <span class="name-word" id="lastname">Martchouk</span></h1>
       
         {#each Object.entries(links) as [key, value]}
             <details>
