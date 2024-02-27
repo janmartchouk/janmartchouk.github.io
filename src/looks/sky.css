@@ -1,9 +1,15 @@
 :root {
-    --color-primary: rgb(37, 37, 37);
-    --color-secondary: rgb(37, 37, 37);
-    --color-background: rgb(247, 252, 255);
-    --text-color: black;
-    --font-display: "Scotch Text Comp Bold Italic", "Times New Roman", serif;
+    --sky-color-primary: rgb(37, 37, 37);
+    --sky-color-secondary: rgb(37, 37, 37);
+    --sky-color-background: rgb(247, 252, 255);
+    --sky-text-color: black;
+    --sky-font-display: "Scotch Text Comp Bold Italic", "Times New Roman", serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --sky-text-color: rgb(224, 224, 224);
+    }
 }
 
 @font-face {
@@ -17,51 +23,6 @@
     font-display: swap;
 }
 
-#look-sky #name {
-    font-family: "Scotch Text Comp Bold Italic";
-    font-style: italic;
-    font-weight: Black;
-    color: var(--text-color);
-    text-transform: lowercase;
-    letter-spacing: -.5rem;
-    font-size: 12.5rem;
-    margin: 5rem 0 15rem;
-    text-align: center;
-    mix-blend-mode:normal;
-    pointer-events: none;
-    user-select: none;
-}
-
-#look-sky main {
-    background-image: url('../r/i/clouds-tile.png');
-    background-repeat: repeat;
-    background-size: 100rem;
-    animation: moving-sky 45s linear infinite;
-}
-
-@media (prefers-color-scheme: dark) {
-
-    :root {
-        --text-color: rgb(224, 224, 224);
-    }
-
-    #look-sky main {
-        background-image: url('../r/i/dark-clouds-tile.png');
-    }
-
-    #look-sky #name {
-        mix-blend-mode:difference;
-    }
-}
-
-@media (max-width: 500px) {
-    #look-sky #name {
-        font-size: 10rem !important;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-    }
-}
-
 @keyframes moving-sky {
     from {
         background-position: 200rem -200rem;
@@ -71,7 +32,52 @@
     }
 }
 
-#look-sky .button, summary {
+#look-sky {
+
+#name {
+    font-family: "Scotch Text Comp Bold Italic";
+    font-style: italic;
+    font-weight: Black;
+    color: var(--sky-text-color);
+    text-transform: lowercase;
+    letter-spacing: -.5rem;
+    font-size: 12.5rem;
+    margin: 5rem 0 15rem;
+    text-align: center;
+    mix-blend-mode:normal;
+    user-select: none;
+    * {
+        cursor: help !important;
+    }
+}
+
+main {
+    background-image: url('../r/i/clouds-tile.png');
+    background-repeat: repeat;
+    background-size: 100rem;
+    animation: moving-sky 45s linear infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    main {
+        background-image: url('../r/i/dark-clouds-tile.png');
+    }
+
+    #name {
+        mix-blend-mode:difference;
+    }
+}
+
+@media (max-width: 500px) {
+    #name {
+        font-size: 10rem !important;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.button, summary {
     font-size: 5rem;
     text-decoration: none;
     text-align: left;
@@ -79,42 +85,128 @@
     font-style: italic;
     letter-spacing: -.25rem;
     font-family: 'Times New Roman', Times, serif;
-    color: var(--text-color);
+    color: var(--sky-text-color);
     user-select: none;
-
 }
 
-#look-sky .button-icon {
+.button-icon {
     margin: 0;
     font-style: normal;
     position: relative;
     top: 5px;
-    color: var(--text-color);
+    color: var(--sky-text-color);
     display: none;
 }
-#look-sky .button, summary {
+.button, summary {
     margin-bottom: 1.5rem;
 }
 
-#look-sky details > .button {
+details > .button {
     position: relative;
     left: 4.5rem;
 }
 
-#look-sky summary::marker {
+summary::marker {
     content: "";
 }
 
-#look-sky summary::marker,
-#look-sky summary::-webkit-details-marker {
+summary::marker,
+summary::-webkit-details-marker {
   display: none;
 }
 
-#look-sky summary {
+summary {
     cursor: pointer;
-    color: var(--text-color) !important;
+    color: var(--sky-text-color) !important;
 }
 
-#look-sky summary, details {
+summary, details {
     transition: .05s ease-in-out;
+}
+
+.center-container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    min-height: 100vh;
+    height: 100%;
+    padding: 3rem;
+    max-width: 100vw;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+#name {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-family: var(--sky-font-display);
+}
+
+.name-word {
+    transition: .05s ease-in-out;
+    cursor: pointer;
+}
+
+.button:visited, .button:hover, .button:Link, .button, summary {
+    color: var(--sky-text-color);
+}
+
+.button {
+    display: block;
+}
+
+.button:hover {
+    text-decoration: underline;
+    text-decoration-thickness: .4rem;
+}
+
+/* make elements slide in */
+details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+}
+  
+@keyframes sweep {
+  0%    {opacity: 0; transform:translateX(-10px);}
+  100%  {opacity: 1; transform: none;}
+}
+
+/* replace the triangle on the left with an animated one */
+summary::marker {
+    display: none !important;
+    color: transparent;
+    opacity: 0;
+    text-decoration: none !important;
+    text-decoration-skip-ink: all;
+}
+
+summary::before {
+    width: 0; 
+    height: 0; 
+    border-left: 2rem solid var(--sky-text-color);
+    border-right: 2rem solid transparent;
+    border-bottom: 1.25rem solid transparent;
+    border-top: 1.25rem solid transparent;
+    display: inline-block;
+    transition: .2s ease-in-out;
+    content: "";
+}
+
+@media(min-width: 800px) {
+summary:hover::before {
+    transform: translateX(1rem);
+}
+}
+
+details[open] summary::before {
+    transform: rotate(90deg) translate(1rem, 1rem);
+}
+@media(min-width: 800px) {
+    details[open] summary::before {
+        transform: rotate(90deg) translate(.75rem, .5rem);
+    }
+}
+
 }

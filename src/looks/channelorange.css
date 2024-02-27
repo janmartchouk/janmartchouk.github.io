@@ -1,0 +1,171 @@
+:root {
+    --channelorange-color: #fe740f;
+    --channelorange-bg: white;
+    --channelorange-shadow: rgba(0,0,0,0.2);
+    --channelorange-font-1: 'CooperFiveOpti-Black', sans-serif;
+    --channelorange-font-2: 'Oracle', sans-serif;
+    --channelorange-font-3: 'Matryoshka XXS', monospace;
+    --channelorange-hint-color: rgba(0,0,0,.2);
+}
+
+@font-face {
+    font-family: 'Matryoshka XXS';
+    src: local('Matryoshka XXS'),
+        url('../r/f/MatryoshkaXXS.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --channelorange-bg: black;
+        --channelorange-shadow: rgba(255,255,255,.1);
+        --channelorange-hint-color: rgba(255,255,255,.2);
+    }
+}
+
+#look-channelorange {
+
+
+    box-sizing: border-box;
+
+    main {
+        width: 100vw;
+        height: 100vh;
+        background: var(--channelorange-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #album {
+        &::after {
+            content: "Tap to turn";
+            position: absolute;
+            bottom: -8rem;
+            font-size: 5rem;
+            color: var(--channelorange-hint-color);
+            width: 100%;
+            text-align: center;
+            transition: .2s ease-in-out;
+            font-family: var(--channelorange-font-3);
+        }
+        &.turned::after {
+            opacity: 0;
+        }
+        background: transparent;
+        height: min(80vw, 80vh);
+        width: min(80vw, 80vh);
+        perspective: 500rem;
+        margin-left: 1rem;
+        cursor: pointer;
+        transition: .2s ease-in-out;
+        transform: scale(.99);
+        #front, #back {
+            backface-visibility: hidden;
+            background: var(--channelorange-color);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            border-radius: 10px;
+            box-shadow: 0 0 10rem var(--channelorange-shadow);
+        }
+        #front {
+            justify-content: center;
+            align-items: start;
+        }
+        #back {
+            transform: rotateY(180deg);
+            flex-direction: column;
+            justify-content: center;
+        }
+        #album-content {
+            width: 100%;
+            height: 100%;
+            transition: 1s ease-in-out;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        &:hover {
+            transform: scale(1);
+        }
+    }
+    #album.turned {
+        #album-content {
+            transform: rotateY(180deg);
+        }
+    }
+
+    #name {
+        cursor: help;
+        width: 50rem;
+        filter: none;
+        margin-top: 30rem;
+    }
+
+    .link-category {
+        padding-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 95vw;
+        max-width: 80rem;
+        font-weight: bold;
+        font-family: var(--channelorange-font-3);
+        font-size: 3rem;
+        .category-name {
+            font-weight: extrabold;
+        }
+        * {
+            color: white;
+            text-decoration: none;
+            padding: .5rem;
+            padding-left: 4rem;
+        };
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    #explicit {
+        width: 10rem;
+        background: white;
+        padding: .3rem;
+        position: absolute;
+        right: 2rem;
+        bottom: 2rem;
+    }
+
+
+    @media(max-width: 800px) {
+        #album {
+            height: min(95vw, 95vh);
+            width: min(95vw, 95vh);
+            &::after {
+                bottom: -12rem;
+                font-size: 10rem;
+            }
+            margin-left: 0;
+        }
+        #name {
+            width: 25rem;
+            margin-top: 15rem;
+        }
+        #explicit {
+            width: 7rem;
+        }
+        main {
+            min-height: 90vh;
+            height: -webkit-fill-available !important;
+        }
+        .link-category * {
+            padding-left: 0;
+        }
+    }
+}
+

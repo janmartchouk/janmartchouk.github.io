@@ -3,8 +3,13 @@
   import Shining from './looks/shining.svelte'
 
   import { menuclicks } from './lib/links';
+  import Channelorange from './looks/channelorange.svelte';
 
-  let looks: any[] = [Sky, Shining];
+  let looks: any[] = [
+    Sky, 
+    Shining, 
+    Channelorange
+  ];
 
   // pick a random look
   let current_look = Math.floor(Math.random() * looks.length);
@@ -18,7 +23,7 @@
     menuclicks.set(0)
   }
 
-  // let current_look = Sky;
+  // current_look = 2;
 
 </script>
 
@@ -28,6 +33,7 @@
   <!-- change looks -->
   <p on:click={() => change_look(0)}>⛅</p>
   <p on:click={() => change_look(1)}>🌟</p>
+  <p on:click={() => change_look(2)}>🍊</p>
 </details>
 {/if}
 

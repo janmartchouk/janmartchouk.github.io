@@ -5,8 +5,6 @@ const links : any = {
       instagram: "https://instagram.com/janmartchouk",
       twitter: "https://twitter.com/janmartchouk",
       github: "https://github.com/janmartchouk",
-      bluesky: "https://bsky.app/profile/martcho.uk",
-      mastodon: "https://mas.to/@janmartchouk"
     },
     blogs: {
       plants: "https://plants.martcho.uk",

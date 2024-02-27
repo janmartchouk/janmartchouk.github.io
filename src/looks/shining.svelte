@@ -1,9 +1,12 @@
 <script lang="ts">
-    import './shining.css'
     import links from '../lib/links.js';
     import { longer_names } from '../lib/links.js';
     import name from "../r/i/jan-shining-transparent.png";
     import { menuclicks } from '../lib/links.js';
+    import { onMount } from 'svelte';
+    onMount(async () => {
+      await import('./shining.css');
+    });
 </script>
 
 <svelte:head>

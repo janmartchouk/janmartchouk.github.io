@@ -1,8 +1,11 @@
 <script lang="ts">
   import Button from '../lib/Button.svelte';
   import links from '../lib/links.js';
-  import './sky.css'
   import {menuclicks} from '../lib/links.js';
+  import { onMount } from 'svelte';
+  onMount(async () => {
+      await import('./sky.css');
+  });
 </script>
 
 <svelte:head>

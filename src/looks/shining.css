@@ -1,21 +1,17 @@
 :root {
-    --color-background: #fce800;
-    --font-display: 'Universal Accreditation', sans-serif;
+    --shining-color-background: #fce800;
+    --shining-font-display: 'Universal Accreditation', sans-serif;
 }
-
-
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-background: black;
+        --shining-color-background: black;
         --shining-text-color: #fce800;
     }
     .name {
         filter: invert(85%) sepia(76%) saturate(10494%) hue-rotate(345deg) brightness(70%) contrast(200%);
     }
 }
-
-
 
 @font-face {
     font-family: 'Universal Accreditation';
@@ -34,7 +30,15 @@
     font-display: swap;
 }
 
-#look-shining h1 {
+#look-shining {
+
+    user-select: none;
+
+    main {
+        background: var(--shining-color-background);
+    }
+
+h1 {
     font-family: "Muli Light Italic";
     position: absolute;
     top: 10rem;
@@ -45,26 +49,27 @@
     color: var(--shining-text-color)
 }
 
-#look-shining main {
+main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-#look-shining .name {
+.name {
     width: 500px;
     max-width: 95vw;
     margin-top: 30rem;
+    cursor: help;
 }
 
-#look-shining #text-container {
+#text-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: space-between;
     margin-top: 5rem;
-    font-family: var(--font-display);
+    font-family: var(--shining-font-display);
     font-size: 5rem;
     text-transform: uppercase;
     max-width: 500px;
@@ -75,7 +80,7 @@
     color: var(--shining-text-color)
 }
 
-#look-shining .link-category {
+.link-category {
     display: flex;
     /* width: 100%; */
     flex-wrap: wrap;
@@ -88,7 +93,7 @@
     color: var(--shining-text-color)
 }
 
-#look-shining .link-category b {
+.link-category b {
     position: absolute;
     font-size: 3rem;
     top: -.5rem;
@@ -96,31 +101,31 @@
 }
 
 @media (max-width: 700px) {
-    #look-shining #text-container {
+    #text-container {
         font-size: 5.5rem;
         max-width: 90vw;
         padding-bottom: 5rem;
     }
 
-    #look-shining .name {
+    .name {
         margin: 5rem 5rem -20rem;
         max-width: 90vw;
     }
 
-    #look-shining #link-heading {
+    #link-heading {
         display: none;
     }
 
-    #look-shining main {
+    main {
         min-height: 90vh;
         height: -webkit-fill-available !important;
     }
 
-    #look-shining .link-category {
+    .link-category {
         padding-top: 1.5rem;
     }
 
-    #look-shining .link-category b {
+    .link-category b {
         font-size: 2rem
     }
 
@@ -133,13 +138,13 @@
     }
 }
 
-#look-shining #text-container #link-heading {
+#text-container #link-heading {
     width: 100%;
     text-align: center;
     /* display: none; */
 }
 
-#look-shining .link-category b, #look-shining .link-category a {
+.link-category b, .link-category a {
     display: inline-block;
     color: black;
     text-decoration: none;
@@ -149,10 +154,12 @@
     color: var(--shining-text-color)
 }
 
-#look-shining .link-category b:last-child, #look-shining .link-category a:last-child {
+.link-category b:last-child, .link-category a:last-child {
     padding-right: 0;
 }
 
-#look-shining #text-container a:hover {
+#text-container a:hover {
     text-decoration: underline;
+}
+
 }
