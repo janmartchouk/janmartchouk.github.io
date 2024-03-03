@@ -1,5 +1,9 @@
-@import url('https://cdn.jsdelivr.net/gh/tzcl/logseq-monokai@main/custom.css');
+@import url('https://cdn.jsdelivr.net/gh/sansui233/logseq-bonofix-theme/custom.css');
+b {
+  color: mediumseagreen !important;
+}
 
-.whiteboard, .flashcards-nav, .journals-nav {
-  display: none;
+i {
+  color: violet !important;
+  font-style: normal !important;
 }
