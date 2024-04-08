@@ -16,6 +16,9 @@ const links : any = {
       letterboxd: "https://letterboxd.com/janmartchouk",
       musicboard: "https://musicboard.app/janmartchouk",
       goodreads: "https://www.goodreads.com/janmartchouk"
+    },
+    apps: {
+      chrono: 'https://martcho.uk/app/chrono',
     }
   }
 
@@ -24,7 +27,8 @@ export default links;
 const longer_names : any = {
   social: "Social Media",
   blogs: "Blogs, Projects",
-  media: "Music, Movie & Book Reviews"
+  media: "Music, Movie & Book Reviews",
+  apps: "Web Apps",
 }
 
 export { longer_names }
