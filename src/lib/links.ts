@@ -8,9 +8,8 @@ const links : any = {
     },
     blogs: {
       plants: "https://plants.martcho.uk",
-      towers: "https://towers.martcho.uk",
-      pics: "https://pics.martcho.uk",
       graphics: "https://graphics.martcho.uk",
+      politics: "https://martcho.uk/blog",
     },
     media: {
       letterboxd: "https://letterboxd.com/janmartchouk",
