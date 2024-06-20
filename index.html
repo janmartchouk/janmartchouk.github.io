@@ -1,18 +1,109 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="src/r/i/favicon.ico">
-    <link rel="me" href="https://github.com/janmartchouk" />
-    <link rel="me" href="https://bsky.app/profile/martcho.uk" />
-    <link rel="me" href="https://mas.to/@janmartchouk" />
-    <title>jan martchouk</title>
-    <!-- <meta name="theme-color" content="#52a8df" media="(prefers-color-scheme: light)"> -->
-    <!-- <meta name="theme-color" content="#040404" media="(prefers-color-scheme: dark)"> -->
+    <title>martcho.uk</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+	  <main>
+		  <div id='container'>
+			<h1 id=name>Jan Martchouk</h1>
+			<p id='about'>
+			<span id='age'>X</span> Years Old. Computer Science Student at University of Bonn, Germany.
+			</p>
+			<table class='table' id='social-media'>
+			<thead>
+				<th>Social Media</th>
+			</thead>
+			<tbody>
+			<tr>
+				<th>Twitter</th>
+				<td><a rel=me target=_blank href='https://x.com/janmartchouk'>x.com/janmartchouk</a></td>
+			</tr>
+			<tr>
+				<th>GitHub</th>
+				<td><a rel=me target=_blank href='https://github.com/janmartchouk'>github.com/janmartchouk</a></td>
+			</tr>
+			<tr>
+				<th>Instagram</th>
+				<td><a rel=me target=_blank href='https://instagram.com/janmartchouk'>instagram.com/janmartchouk</a></td>
+			</tr>
+			</tbody>
+			</table>
+
+			<table class='table' id='blogs'>
+			<thead>
+				<th>Blogs and Feeds</th>
+			</thead>
+			<tbody>
+			<tr>
+				<th>Politik<i> (German)</i></th>
+				<td><a rel=me target=_blank href='https://martcho.uk/blog'>martcho.uk/blog</a></td>
+			</tr>
+			<tr>
+				<th>Plants</th>
+				<td><a rel=me target=_blank href='https://plants.martcho.uk'>plants.martcho.uk</a></td>
+			</tr>
+			<tr>
+				<th>Graphics</th>
+				<td><a rel=me target=_blank href='https://graphics.martcho.uk'>graphics.martcho.uk</a></td>
+			</tr>
+			<tr>
+				<th>Towers</th>
+				<td><a rel=me target=_blank href='https://towers.martcho.uk'>towers.martcho.uk</a></td>
+			</tr>
+			</tbody>
+			</table>
+
+			<table class='table' id='media'>
+				<thead>
+					<th>Media</th>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Letterboxd <i>(Movies)</i></th>
+						<td><a rel=me target=_blank href='https://letterboxd.com/janmartchouk/'>letterboxd.com/janmartchouk/</a></td>
+					</tr>
+					<tr>
+						<th>Musicboard</th>
+						<td><a rel=me target=_blank href='https://musicboard.app/janmartchouk'>musicboard.app/janmartchouk</a></td>
+					</tr>
+					<tr>
+						<th>Goodreads</th>
+						<td><a rel=me target=_blank href='https://www.goodreads.com/user/show/151106039-jan'>goodreads.com/user/show/151106039-jan</a></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class='table' id='projects'>
+				<thead>
+					<th>Projects</th>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Chrono for Logseq</th>
+						<td>
+							<p>Chrono is a standalone web-app for use alongside Logseq. It can parse your notes and displays a timeline of people, events and places, as defined in your page properties.</p>
+							<br />
+							<a target=_blank href='https://github.com/janmartchouk/chrono-for-logseq'>github.com/janmartchouk/chrono-for-logseq</a></td>
+						</td>
+					</tr>
+					<tr>
+						<th>VRS widgets for iOS</th>
+						<td>
+							<p>Widgets for the VRS public transport system in North-Rhine Westphalia, Germany. Shows the next departures for a given station on your home or lock screen.</p>
+							<br />
+							<a target=_blank href='https://github.com/janmartchouk/vrs-widget'>github.com/janmartchouk/vrs-widget</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		  </div>
+	  </main>
   </body>
+  <script>
+	  document.getElementById('age').innerText = new Date().getFullYear() - 2005;
+  </script>
 </html>
